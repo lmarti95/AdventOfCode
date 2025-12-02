@@ -10,5 +10,11 @@ add_executable(AdventOfCode main.cpp
         Shared/Menu.h
         Shared/RunTranslate.cpp
         Shared/RunTranslate.h
+        Shared/StringHelper.cpp
+        Shared/StringHelper.h
+
         2025/Day1/Year2025Day1.cpp
-        2025/Day1/Year2025Day1.h)
+        2025/Day1/Year2025Day1.h
+        2025/Day2/Year2025Day2.cpp
+        2025/Day2/Year2025Day2.h
+)
