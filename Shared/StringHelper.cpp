@@ -17,3 +17,11 @@ std::vector<std::string> StringHelper::SplitString(std::string line, std::string
 
     return tokens;
 }
+
+std::vector<int> StringHelper::StringToNumbers(std::string word) {
+    std::vector<int> result;
+    for (char c : word) {
+        result.push_back(c-'0');
+    }
+    return result;
+}

@@ -4,10 +4,9 @@
 
 #include "Year2025Day2.h"
 #include "../../Shared/ReadHelper.h"
+#include "../../Shared/StringHelper.h"
 
 #include <iostream>
-
-#include "../../Shared/StringHelper.h"
 
 void Year2025Day2::Run(std::string filenamePath) {
     RunPart1(filenamePath);
