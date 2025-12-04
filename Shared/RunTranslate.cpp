@@ -7,6 +7,7 @@
 #include "../2025/Day1/Year2025Day1.h"
 #include "../2025/Day2/Year2025Day2.h"
 #include "../2025/Day3/Year2025Day3.h"
+#include "../2025/Day4/Year2025Day4.h"
 
 void RunTranslate::RunCorrectFunction(int year, int day, int inputType) {
     switch (year) {
@@ -30,6 +31,9 @@ void RunTranslate::RunCorrectday2025(int day, std::string filenamePath) {
             break;
         case 3:
             Year2025Day3::Run(filenamePath);
+            break;
+        case 4:
+            Year2025Day4::Run(filenamePath);
             break;
         default:
             break;
