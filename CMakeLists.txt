@@ -24,7 +24,7 @@ endforeach()
 
 # --- Link all yearly/day libraries ---
 foreach(YEAR RANGE 2015 2025)
-    foreach(DAY RANGE 1 24)
+    foreach(DAY RANGE 1 25)
         set(TARGET_NAME "Year${YEAR}Day${DAY}")
         if (TARGET ${TARGET_NAME})
             target_link_libraries(AdventOfCode PRIVATE ${TARGET_NAME})

@@ -1,8 +1,7 @@
 # Get year from folder name
 get_filename_component(YEAR_NAME ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 
-# Loop through days 1–24
-foreach(DAY RANGE 1 24)
+foreach(DAY RANGE 1 12)
     set(DAY_DIR "${CMAKE_CURRENT_SOURCE_DIR}/Day${DAY}")
 
     # Skip non-existing day folders
