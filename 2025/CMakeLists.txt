@@ -7,7 +7,9 @@ foreach(DAY RANGE 1 12)
     # Skip non-existing day folders
     if (EXISTS "${DAY_DIR}")
         set(CPP_FILE "${DAY_DIR}/Year${YEAR_NAME}Day${DAY}.cpp")
-        set(H_FILE   "${DAY_DIR}/Year${YEAR_NAME}Day${DAY}.h")
+        set(H_FILE   "${DAY_DIR}/Year${YEAR_NAME}Day${DAY}.h"
+                Day5/Range.cpp
+                Day5/Range.h)
 
         # Only add the library if the cpp file exists
         if (EXISTS "${CPP_FILE}")
