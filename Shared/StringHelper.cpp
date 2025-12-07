@@ -26,7 +26,7 @@ std::vector<int> StringHelper::StringToNumbers(std::string word) {
     return result;
 }
 
-void StringHelper::ChangePartsOfString(std::string& toBeChanged, std::string from, std::string to) {
+void StringHelper::ChangeFirstOccurenceInString(std::string& toBeChanged, std::string from, std::string to) {
     std::string newString = toBeChanged.substr(0,toBeChanged.find(from));
     newString += to;
     newString += toBeChanged.substr(toBeChanged.find(from)+from.length());

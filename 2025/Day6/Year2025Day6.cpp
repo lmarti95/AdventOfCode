@@ -18,10 +18,10 @@ void Year2025Day6::RunPart1(std::string filenamePath) {
 
     for (auto& line : lines) {
         while (line.find("  ") != std::string::npos) {
-            StringHelper::ChangePartsOfString(line, "  ", " ");
+            StringHelper::ChangeFirstOccurenceInString(line, "  ", " ");
         }
         if (line[0] == ' ') {
-            StringHelper::ChangePartsOfString(line, " ", "");
+            StringHelper::ChangeFirstOccurenceInString(line, " ", "");
         }
         if (line[line.length()-1] == ' ') {
             line = line.substr(0, line.length()-1);
@@ -69,7 +69,7 @@ void Year2025Day6::RunPart2(std::string filenamePath) {
     }
 
     while (lines[lines.size()-1].find("  ") != std::string::npos) {
-        StringHelper::ChangePartsOfString(lines[lines.size()-1], "  ", " ");
+        StringHelper::ChangeFirstOccurenceInString(lines[lines.size()-1], "  ", " ");
     }
 
     auto operators = StringHelper::SplitString(lines[lines.size()-1], " ");
@@ -80,7 +80,7 @@ void Year2025Day6::RunPart2(std::string filenamePath) {
 
 int Year2025Day6::GetNumberOfColumns(std::string line) {
     while (line.find("  ") != std::string::npos) {
-        StringHelper::ChangePartsOfString(line, "  ", " ");
+        StringHelper::ChangeFirstOccurenceInString(line, "  ", " ");
     }
     auto parts = StringHelper::SplitString(line, " ");
 

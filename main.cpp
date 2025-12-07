@@ -3,6 +3,7 @@
 #include "Shared/Menu.h"
 
 int main() {
-    Menu::RunMenu();
+    Menu menu;
+    menu.RunMenu();
     return 0;
 }

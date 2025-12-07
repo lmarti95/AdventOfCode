@@ -16,7 +16,7 @@ void Year2025Day7::RunPart1(std::string filenamePath) {
     auto lines = ReadHelper::ReadLines(filenamePath);
     int result = 0;
 
-    StringHelper::ChangePartsOfString(lines[0],"S", "|");
+    StringHelper::ChangeFirstOccurenceInString(lines[0],"S", "|");
 
     for (int i = 1; i < lines.size(); i++) {
         for (int j = 0; j < lines[i].size(); j++) {

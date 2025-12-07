@@ -14,6 +14,15 @@ void Year2015Day1::RunPart1(std::string filenamePath) {
     auto lines = ReadHelper::ReadLines(filenamePath);
     int result = 0;
 
+    for (char c : lines[0]) {
+        if (c == '(') {
+            result++;
+        }
+        else {
+            result--;
+        }
+    }
+
     std::cout << "Result: " << result << std::endl;
 }
 

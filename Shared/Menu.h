@@ -5,10 +5,17 @@
 #ifndef ADVENTOFCODE_MENU_H
 #define ADVENTOFCODE_MENU_H
 
+#include <string>
 
 class Menu {
 public:
-    static void RunMenu();
+    void RunMenu();
+private:
+    void TryToReadLastInput();
+    void SaveLatestInput(std::string year, std::string day, std::string inputType);
+    int DefaultYear = 0;
+    int DefaultDay = 0;
+    int DefaultInputType = 0;
 };
 
 
