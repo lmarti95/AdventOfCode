@@ -10,6 +10,10 @@ public:
 private:
     static void RunPart1(std::string filenamePath);
     static void RunPart2(std::string filenamePath);
+
+    static int GetNumberOfColumns(std::string line);
+    static long long GetResult(std::vector<std::string> operators, std::vector<std::vector<long long>> columns);
+
 };
 
 
