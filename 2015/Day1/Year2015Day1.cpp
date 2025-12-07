@@ -29,7 +29,21 @@ void Year2015Day1::RunPart1(std::string filenamePath) {
 void Year2015Day1::RunPart2(std::string filenamePath) {
     std::cout << std::endl << "Part 2" << std::endl;
     auto lines = ReadHelper::ReadLines(filenamePath);
-    int result = 0;
+    int count = 0;
+    int result;
+
+    for (int i = 0; i < lines[0].size(); i++) {
+        if (lines[0][i] == '(') {
+            count++;
+        }
+        else {
+            count--;
+            if (count == -1) {
+                result = i+1;
+                break;
+            }
+        }
+    }
 
     std::cout << "Result: " << result << std::endl;
 }
