@@ -4,12 +4,16 @@
 #include <string>
 #include <vector>
 
+#include "Point.h"
+
 class Year2025Day8 {
 public:
     static void Run(std::string filenamePath);
 private:
     static void RunPart1(std::string filenamePath);
     static void RunPart2(std::string filenamePath);
+
+    static bool IsAllConnecred(std::vector<std::vector<Point*>>& circuits, int size);
 };
 
 

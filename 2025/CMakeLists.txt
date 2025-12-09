@@ -11,7 +11,9 @@ foreach(DAY RANGE 1 12)
                 Day5/Range.cpp
                 Day5/Range.h
                 Day7/Point.cpp
-                Day7/Point.h)
+                Day7/Point.h
+                Day8/Point.cpp
+                Day8/Point.h)
 
         # Only add the library if the cpp file exists
         if (EXISTS "${CPP_FILE}")
