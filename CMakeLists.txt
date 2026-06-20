@@ -11,6 +11,8 @@ add_executable(AdventOfCode
         Shared/Menu.cpp
         Shared/RunTranslate.cpp
         Shared/StringHelper.cpp
+        Shared/Utilities.cpp
+        Shared/Utilities.h
 )
 
 target_include_directories(AdventOfCode PRIVATE Shared)
