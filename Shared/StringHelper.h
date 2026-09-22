@@ -12,6 +12,7 @@ public:
     static std::vector<std::string> SplitString(std::string line, std::string delimiter);
     static std::vector<int> StringToNumbers(std::string word);
     static void ChangeFirstOccurenceInString(std::string& toBeChanged, std::string from, std::string to);
+    static bool IsNumber(const std::string& string);
 };
 
 

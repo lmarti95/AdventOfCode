@@ -33,3 +33,9 @@ void StringHelper::ChangeFirstOccurenceInString(std::string& toBeChanged, std::s
 
     toBeChanged = newString;
 }
+
+bool StringHelper::IsNumber(const std::string& string)
+{
+    return !string.empty() && std::find_if(string.begin(),
+        string.end(), [](unsigned char c) { return !std::isdigit(c); }) == string.end();
+}
