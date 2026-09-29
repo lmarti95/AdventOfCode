@@ -53,6 +53,7 @@ void Year2015Day7::RunPart2(std::string filenamePath) {
     for (auto& line : lines) {
         if (line == "14146 -> b") {
             wires.push_back(ConstructWire("956 -> b"));
+            continue;
         }
         wires.push_back(ConstructWire(line));
     }
@@ -174,6 +175,6 @@ std::bitset<16> GetValue(std::string wireName) {
             return currentWire->calculatedValue;
         }
     }
-    
+
     return 0;
 }
