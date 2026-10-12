@@ -4,9 +4,9 @@
 
 #include <iostream>
 
-bool checkFirstRequirement(const std::string& inputWord);
-bool checkThirdRequirement(const std::string& inputWord);
-void getNextCombination(std::string& word);
+bool CheckFirstRequirement(const std::string& inputWord);
+bool CheckThirdRequirement(const std::string& inputWord);
+void GetNextCombination(std::string& word);
 
 void Year2015Day11::Run(std::string filenamePath) {
     RunPart1(filenamePath);
@@ -19,8 +19,8 @@ void Year2015Day11::RunPart1(std::string filenamePath) {
 
     std::string word = lines[0];
 
-    while (!checkFirstRequirement(word) || !checkThirdRequirement(word)) {
-        getNextCombination(word);
+    while (!CheckFirstRequirement(word) || !CheckThirdRequirement(word)) {
+        GetNextCombination(word);
     }
 
     std::cout << "Result: " << word << std::endl;
@@ -28,18 +28,25 @@ void Year2015Day11::RunPart1(std::string filenamePath) {
 
 void Year2015Day11::RunPart2(std::string filenamePath) {
     std::cout << std::endl << "Part 2" << std::endl;
+    auto lines = ReadHelper::ReadLines(filenamePath);
 
-    std::string word = "hepxxyzz";
-    getNextCombination(word);
+    std::string word = lines[0];
+    GetNextCombination(word);
 
-    while (!checkFirstRequirement(word) || !checkThirdRequirement(word)) {
-        getNextCombination(word);
+    while (!CheckFirstRequirement(word) || !CheckThirdRequirement(word)) {
+        GetNextCombination(word);
+    }
+
+    GetNextCombination(word);
+
+    while (!CheckFirstRequirement(word) || !CheckThirdRequirement(word)) {
+        GetNextCombination(word);
     }
 
     std::cout << "Result: " << word << std::endl;
 }
 
-void getNextCombination(std::string& word) {
+void GetNextCombination(std::string& word) {
     bool carry = false;
     for (int i = word.length()-1; i != 0; i--) {
         if (i == word.length()-1) {
@@ -82,7 +89,7 @@ void getNextCombination(std::string& word) {
 
 }
 
-bool checkFirstRequirement(const std::string& inputWord) {
+bool CheckFirstRequirement(const std::string& inputWord) {
     for (int i = 0; i < inputWord.length()-2; i++) {
         if (inputWord[i] == inputWord[i+1]-1 &&  inputWord[i] == inputWord[i+2] -2) {
             return true;
@@ -92,7 +99,7 @@ bool checkFirstRequirement(const std::string& inputWord) {
     return false;
 }
 
-bool checkThirdRequirement(const std::string& inputWord) {
+bool CheckThirdRequirement(const std::string& inputWord) {
     int count = 0;
     for (int i = 0; i < inputWord.length()-1; i++) {
         if (inputWord[i] == inputWord[i+1]) {
